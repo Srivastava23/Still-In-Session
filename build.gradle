@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.gretty' version '4.1.4'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Jakarta Servlet API (provided by Tomcat 10 at runtime)
+    providedCompile 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+}
+
+gretty {
+    servletContainer = 'tomcat10'
+    contextPath = '/SessionDemo'
+    httpPort = 8080
+}
