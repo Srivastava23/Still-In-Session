@@ -12,8 +12,13 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Build output
 *.war
 *.jar
+
+# Misc
+build_log.txt
 build_error.txt
+generate_docx.py
